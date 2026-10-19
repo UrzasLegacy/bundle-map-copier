@@ -87,23 +87,6 @@ On Linux/macOS use `bash ./gradlew clean build`.
 This project uses the standard `jar` task: there is **no `shadowJar` task** because
 the only production dependency is provided by the server.
 
-## Put this project on GitHub
-
-Create a new empty GitHub repository (without an initial README/license), then
-run these commands from this project directory. Substitute your actual URL.
-
-```powershell
-git init -b main
-git add .
-git diff --cached --stat
-git commit -m "Initial standalone BundleMapCopier"
-git remote add origin https://github.com/YOUR-USERNAME/bundle-map-copier.git
-git push -u origin main
-```
-
-Commit source, build files, documentation and **all four wrapper files**.
-The supplied `.gitignore` excludes `.gradle`, `build`, `bin`, `dist` and editor files.
-There is no existing `.git` directory or remote bundled with this download.
 
 ## Publish downloadable releases
 
