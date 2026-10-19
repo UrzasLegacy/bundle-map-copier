@@ -87,7 +87,6 @@ On Linux/macOS use `bash ./gradlew clean build`.
 This project uses the standard `jar` task: there is **no `shadowJar` task** because
 the only production dependency is provided by the server.
 
-
 ## Publish downloadable releases
 
 The included GitHub Actions workflow tests/builds on pushes to main/master and
