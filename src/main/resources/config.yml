@@ -1,0 +1,9 @@
+# Number of additional complete sets per command (1..64).
+max-copies: 16
+# Each individual map copied costs this many ordinary empty maps (1..64).
+empty-maps-per-map: 1
+# Optional extra cost per complete bundle, in addition to empty maps and a bundle.
+# Only ordinary, unmodified items are accepted. Restart after editing.
+fee:
+  material: EMERALD
+  per-copy: 0

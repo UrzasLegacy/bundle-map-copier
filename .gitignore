@@ -1,0 +1,11 @@
+.gradle/
+build/
+bin/
+dist/
+.idea/
+.vscode/
+*.iml
+*.class
+.DS_Store
+Thumbs.db
+# The Gradle wrapper JAR is intentionally committed.

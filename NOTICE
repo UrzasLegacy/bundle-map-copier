@@ -1,0 +1,9 @@
+BundleMapCopier
+
+Saddle: https://github.com/worstkaas/saddle
+
+Standalone changes (2026-10-19): independent Gradle build, plugin display name,
+saddle.copymaps.use permission (LuckPerms) are retained for continuity.
+
+Gradle wrapper scripts and JAR are Gradle build tooling, distributed under the
+Apache License 2.0.

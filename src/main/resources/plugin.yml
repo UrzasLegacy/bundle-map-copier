@@ -1,0 +1,16 @@
+# Standalone packaging: renamed from Saddle.CopyMaps; compatibility permission retained.
+name: BundleMapCopier
+main: urza.bundlemapcopier.CopyMapsPlugin
+version: ${VERSION}
+api-version: '26.2'
+folia-supported: true
+description: Copy map collections into supplied bundles, paying configured material costs.
+commands:
+  copymaps:
+    description: Copy the maps in your held bundle
+    usage: /copymaps [copies] | /copymaps preview [copies]
+    permission: saddle.copymaps.use
+permissions:
+  saddle.copymaps.use:
+    description: Copy map bundles
+    default: true
