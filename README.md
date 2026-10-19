@@ -8,7 +8,7 @@ This download includes a compiled JAR in `dist/BundleMapCopier-0.1.1.jar`.
 
 ## Install (server owner)
 
-1. Download `BundleMapCopier-0.1.1.jar` from the GitHub Release assets, not the
+1. Download `BundleMapCopier-0.1.1.jar` from the dist directory, not the
    automatically generated GitHub source-code ZIP.
 2. Stop the server.
 3. Put the JAR in the backend server's `plugins` directory.
