@@ -131,13 +131,14 @@ public final class CopyMapsPlugin extends JavaPlugin {
         }
         List<ItemStack> outputs = new ArrayList<>();
         for (int i = 0; i < copies; i++) {
-            ItemStack destination = plan.takeOne(this::isPlainEmptyBundle);
+            ItemStack destination = plan.takeOne(this::isEmptyBundle);
             if (destination == null) {
-                tell(player, "Not enough ordinary empty bundles in your main inventory. Nothing changed.", false);
+                tell(player, "Not enough empty bundles in your main inventory. Nothing changed.", false);
                 return;
             }
             BundleMeta meta = (BundleMeta) destination.getItemMeta();
             meta.setItems(maps);
+            meta.displayName(source.displayName());
             destination.setItemMeta(meta);
             outputs.add(destination);
         }
@@ -161,9 +162,13 @@ public final class CopyMapsPlugin extends JavaPlugin {
         return item.getType() == type && item.isSimilar(new ItemStack(type));
     }
 
-    private boolean isPlainEmptyBundle(ItemStack item) {
-        return item.getItemMeta() instanceof BundleMeta meta && !meta.hasItems()
-                && isPlain(item, item.getType());
+    // private boolean isPlainEmptyBundle(ItemStack item) {
+    //     return item.getItemMeta() instanceof BundleMeta meta && !meta.hasItems()
+    //             && isPlain(item, item.getType());
+    // }
+
+    private boolean isEmptyBundle(ItemStack item) {
+        return item.getItemMeta() instanceof BundleMeta meta && !meta.hasItems();
     }
 
     private void tell(Player player, String message, boolean success) {
